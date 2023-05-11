@@ -55,6 +55,10 @@ main{
     background-color: rgb(145, 145, 255);
 }
 
+.square-bomb{
+    background-color: rgb(255, 0, 0);
+}
+
 /* regole footer */
 .footer-container{
     width: 90%;
