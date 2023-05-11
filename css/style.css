@@ -1,0 +1,65 @@
+/* regole generali */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* regole header */
+.header-container{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container > div > h1{
+    font-size: 60px;
+}
+
+#mybutton{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+#mybutton:hover{
+    cursor: pointer;
+}
+
+/* regole main */
+main{
+    background-color: rgb(128, 255, 212);
+}
+
+.main-container{
+    width: 550px;
+    margin: auto;
+    border: 2px solid black;
+    height: 550px;
+}
+
+.square{
+    float: left;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 2px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square-clicked{
+    background-color: rgb(145, 145, 255);
+}
+
+/* regole footer */
+.footer-container{
+    width: 90%;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
