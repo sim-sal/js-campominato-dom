@@ -2,6 +2,9 @@
 const gridElement = document.querySelector(".main-container");
 console.log(gridElement);
 
+// dichiaro come variabile globale il punteggio iniziale
+let score = 0;
+
 // seleziono il bottone dal quale partirà tutto il processo
 let myButton = document.getElementById("mybutton");
 
@@ -29,16 +32,24 @@ myButton.addEventListener('click',
             // appendo i valori di i ad ogni quadrato
             newSquare.append(i);
 
-            // gestisco l'evento al click di ogni quadrto
+            // gestisco l'evento al click di ogni quadrato
             newSquare.addEventListener('click',
 
                 function() {
+                    // aggiungo classe ad ogni quadrato
                     newSquare.classList.add("square-clicked");
                     console.log("il numero della cella selezionata è: " + i);
 
-                    if (i === bombsArray) {
+                    // setto la variabile corrispondente al valore all'interno di ogni quadrato
+                    let squareNumber = i;
+
+                    // genero le condizioni per mettere in relazione l'array di bombe con i valori presenti nei quadrati
+                    if (bombsArray.includes(squareNumber)) {
                         newSquare.classList.add("square-bomb");
-                        alert("Hai beccato una bomba! Hai perso!");
+                        alert("BOOM! Hai preso una bomba! Il tuo punteggio è: " + score);
+                    }else{
+                        score ++;
+                        console.log("Il tuo punteggio momentaneo è: " + score);
                     }
                     
                 }
@@ -53,10 +64,6 @@ myButton.addEventListener('click',
     }
 
 )
-
-
-
-
 
 
 
