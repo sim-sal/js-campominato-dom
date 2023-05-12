@@ -48,7 +48,10 @@ myButton.addEventListener('click',
                         newSquare.classList.add("square-bomb");
                         alert("BOOM! Hai preso una bomba! Il tuo punteggio è: " + score);
 
+                        // ripuliamo la griglia
                         gridElement.innerHTML = "";
+
+                        // azzeriamo il punteggio
                         score = 0;
                     }else{
                         score ++;
