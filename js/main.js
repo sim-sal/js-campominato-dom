@@ -46,13 +46,16 @@ myButton.addEventListener('click',
                     // genero le condizioni per mettere in relazione l'array di bombe con i valori presenti nei quadrati
                     if (bombsArray.includes(squareNumber)) {
                         newSquare.classList.add("square-bomb");
-                        alert("BOOM! Hai preso una bomba! Il tuo punteggio è: " + score);
+                        
+                        // mostriamo il risultato all'utente
+                        document.getElementById("punteggio").innerHTML = score;
+
+                        // azzeriamo il punteggio
+                        score = 0;
 
                         // ripuliamo la griglia
                         gridElement.innerHTML = "";
 
-                        // azzeriamo il punteggio
-                        score = 0;
                     }else{
                         score ++;
                         console.log("Il tuo punteggio momentaneo è: " + score);
